@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+
+// we try to demonstrate polymorphism using interface and methods
+
 type greeting interface {
 	hey()
 }
