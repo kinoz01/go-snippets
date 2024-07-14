@@ -17,7 +17,7 @@ func multiplyFunc(a int, b int) interface{} {
 }
 
 func divideFunc(a int, b int) interface{} {
-	return float64(a/b)
+	return float64(a)/float64(b)
 }
 
 func applyFuncs(x, y int, funcs ...myFunc) {
