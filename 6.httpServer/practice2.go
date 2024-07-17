@@ -28,7 +28,7 @@ func Router2() {
 	defaultMux := http.NewServeMux()
 	defaultMux.HandleFunc("/", Home2Handler)
 
-	// Combine the routers: first check gorilla/mux routes, then fallback to defaultMux.
+	// Combine the routers in a new rootMux.
 	rootMux := http.NewServeMux()	
 	rootMux.Handle("/", defaultMux)
 	rootMux.Handle("/mux", gorillaRouter)
