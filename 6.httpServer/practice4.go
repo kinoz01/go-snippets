@@ -12,7 +12,7 @@ func NightHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Good Night!")
 }
 
-func MorningHandler() http.Handler {  
+func MorningHandler() http.Handler {  // You can alos choose to return an http.HandlerFunc instead.
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "Good Morning!")
 	})
