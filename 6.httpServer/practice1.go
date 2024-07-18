@@ -24,7 +24,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 // whoami route handler using return way.
 func Whoami() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "My name is Ayoub, here we go again.")
+		fmt.Fprintln(w, "My name is Ayoub!")
 	}
 }
 

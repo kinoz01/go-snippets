@@ -4,10 +4,20 @@
 package main
 
 import (
+	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
 )
+
+func MuxHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Hello From GorillaMux (Default Handler)")
+}
+
+func SpecialHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Hello From Special page (Handled by Default http package)")
+}
 
 func Router3() {
 	mainRouter := mux.NewRouter()
@@ -24,6 +34,9 @@ func Router3() {
 		}
 	})
 
-	
+	log.Println("Starting server at http://127.0.0.1:4040")
 
+	if err := http.ListenAndServe(":4040", handler); err != nil {
+		log.Fatal("Error starting server.", err)
+	}
 }
