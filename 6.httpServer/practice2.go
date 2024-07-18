@@ -1,4 +1,5 @@
-// Combining default server and GorillaMux server (EXAMPLE 1) running at port 3032.
+// Combining default server and GorillaMux server (EXAMPLE 1) running at port 3030.
+// Using http.ServeMux as the Base and Adding gorilla/mux for Specific Routes.
 
 package main
 
@@ -33,8 +34,8 @@ func Router2() {
 	rootMux.Handle("/", defaultMux)
 	rootMux.Handle("/mux", gorillaRouter)
 
-	log.Println("Starting a server partially handled by Gorilla at http://127.0.0.1:3032")
-	if err := http.ListenAndServe(":3032", rootMux); err != nil {
+	log.Println("Starting a server partially handled by Gorilla at http://127.0.0.1:3030")
+	if err := http.ListenAndServe(":3030", rootMux); err != nil {
 		log.Fatal("Failed to start server.\n", err)
 	}
 }

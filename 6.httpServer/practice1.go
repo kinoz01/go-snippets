@@ -1,4 +1,4 @@
-// Create a server the basic way at port 3031.
+// Create a server the basic way at port 2020.
 
 package main
 
@@ -33,8 +33,8 @@ func Router1() {
 	http.HandleFunc("/", HomeHandler)
 	http.HandleFunc("/whoami", Whoami())
 
-	log.Println("Starting server at http://127.0.0.1:3031")
-	if err := http.ListenAndServe(":3031", nil); err != nil {
+	log.Println("Starting server at http://127.0.0.1:2020")
+	if err := http.ListenAndServe(":2020", nil); err != nil {
 		log.Fatal("Failed to start server.\n", err)
 	}
 }
