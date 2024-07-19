@@ -41,5 +41,6 @@ func main() {
 	// using Polymorphism
 	sayHey(ayoub)
 	sayHey(&scobido)
-
+	
+	Test1()
 }
