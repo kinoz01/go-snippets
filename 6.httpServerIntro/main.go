@@ -8,6 +8,7 @@ func main() {
 	go Router3()
 	go Router4()
 	go Router5()
+	go Router6()
 
 	select{}
 }
