@@ -3,15 +3,19 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 )
 
 func Router6() {
 	mux := http.NewServeMux()
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Hello")
+	})
 
 	srv := http.Server{
-		Addr: ":7070",
+		Addr:    ":7070",
 		Handler: mux,
 	}
 
