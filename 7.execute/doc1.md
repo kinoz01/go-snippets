@@ -1,0 +1,2 @@
+- Modern web browsers often make additional requests to fetch resources like favicons (the small icons in browser tabs) or to perform pre-fetching of pages the browser thinks you might visit next.  
+- This explain why the `fmt` print message is printed more than once when using `"/"` as a pattern to the `HandleFunc`.
