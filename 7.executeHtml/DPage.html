@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{.GetTitle}}</title>
+</head>
+<body>
+	<h1>{{.GetTitle}}</h1>
+	<ul>
+		{{range .Items}}
+			<li>{{.}}</li>
+		{{end}}
+	</ul>
+    <p>
+        {{.GetErr}}
+    </p>
+</body>
+</html>
