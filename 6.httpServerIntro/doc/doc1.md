@@ -1,6 +1,6 @@
 The creation and passing of `ResponseWriter` and ``*Request`` to your handler function happen within the `net/http` package, specifically in the implementation of the `http.Server` type and its associated methods. Let's take a closer look at the process:
 
-1. **Listening for Connections:** When you call **http.ListenAndServe**, the server starts listening for incoming TCP connections on the specified port.
+1. **Listening for Connections:** When you call **`http.ListenAndServe`**, the server starts listening for incoming TCP connections on the specified port.
 
 2. **Accepting Connections:** When a client connects, the server accepts the connection, creating a new `net.Conn` object to represent the connection between the client and server.
 
